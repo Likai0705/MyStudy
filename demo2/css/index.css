@@ -1,0 +1,150 @@
+@charset "UTF-8";
+#demo1 {
+  /*
+  提示：在 CSS 定义中，a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的。
+  提示：在 CSS 定义中，a:active 必须被置于 a:hover 之后，才是有效的。
+  提示：伪类名称对大小写不敏感
+  */
+}
+#demo1 a:link {
+  color: black;
+}
+#demo1 a:visited {
+  color: green;
+}
+#demo1 a:hover {
+  color: red;
+}
+#demo1 a:active {
+  color: blue;
+}
+
+#demo2 input:enabled {
+  background-color: antiquewhite;
+}
+#demo2 input:disabled {
+  background-color: #eee;
+}
+#demo2 input:focus {
+  background-color: greenyellow;
+}
+#demo2 input:checked {
+  color: red;
+}
+
+#demo3 ul li {
+  float: left;
+  list-style: none;
+  border: 1px solid #eeeeee;
+  padding: 10px;
+}
+#demo3 ul li a {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: greenyellow;
+  text-align: center;
+  text-decoration: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#demo3 ul li:empty {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+}
+#demo3 ul li:nth-child(2) {
+  background-color: green;
+}
+#demo3 ul li:nth-of-type(2) {
+  background-color: bisque;
+}
+
+#demo4 p {
+  width: 200px;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+#demo4 p::first-letter {
+  font-size: 40px;
+  float: left;
+}
+#demo4 p::first-line {
+  color: red;
+}
+
+#demo5 .yuan div {
+  width: 100px;
+  height: 100px;
+  border: none;
+  float: left;
+  margin: 10px;
+  background-color: red;
+}
+#demo5 .yuan div:first-child {
+  border-radius: 50%;
+}
+#demo5 .yuan div:nth-of-type(2) {
+  height: 50px;
+  border-radius: 50px 50px 0px 0px;
+}
+#demo5 .yuan div:nth-child(3) {
+  height: 50px;
+  border-radius: 0 0 50px 50px;
+}
+#demo5 .yuan div:nth-child(4) {
+  width: 50px;
+  border-radius: 50px 0 0 50px;
+}
+#demo5 .yuan div:nth-child(5) {
+  width: 50px;
+  border-radius: 0 50px 50px 0;
+}
+
+#demo6 .dialog {
+  font-size: 20px;
+  border: none;
+  color: white;
+  background-color: green;
+  border-radius: 7px;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: relative;
+  margin-left: 30px;
+}
+#demo6 .dialog:before {
+  content: "";
+  border-left: 0px solid green;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid green;
+  position: absolute;
+  left: -10px;
+  top: 13px;
+}
+@media only screen and (max-width: 500px) {
+  #demo6 .dialog:before {
+    content: "";
+    border-left: 10px solid transparent;
+    border-top: 0px solid transparent;
+    border-bottom: 10px solid green;
+    border-right: 10px solid transparent;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+}
+
+.clearfix:after, .clearfix:before {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/*# sourceMappingURL=index.css.map */
